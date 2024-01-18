@@ -1,0 +1,205 @@
+/* Slideshow */
+.or {
+    width: 92%;
+    text-align: center;
+    border-bottom: 0.5px solid #b6b6b6;
+    line-height: 0.05em;
+    margin: 0 auto;
+    /* margin: 10px 0 20px; */
+}
+.text-center {
+    text-align: center !important;
+}
+.form-header {
+    color: #292929;
+    font-weight: 300;
+    font-size: 25.6486px;
+    line-height: 29px;
+    text-align: center;
+}
+.form-header-2 {
+    font-family: "Basement Grotesque";
+    color: #292929;
+    font-weight: 800;
+    font-size: 25.6486px;
+    line-height: 29px;
+    text-align: center;
+}
+.form-text2 {
+    color: #7a7a7a;
+    font-weight: 700;
+    font-size: 14.1623px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.mt-2, .my-2 {
+    margin-top: 0.5rem !important;
+}
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.mb-0, .my-0 {
+    margin-bottom: 0 !important;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.col-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66.66667%;
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+}
+.reg-num {
+    background-color: #ff8545;
+    /* margin-left: 34px; */
+    border-radius: 4px;
+    border: none;
+}
+.form-control {
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    background-clip: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-transition: border-color 0.15s ease-in-out,  0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,  0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,  0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    color: #262626;
+    background-color: #ebebeb;
+    border-color: #ebebeb;
+    height: 36px;
+    padding: calc(15px / 2) 10px;
+    font-size: 16px;
+    line-height: 19px;
+}
+.reg-num {
+    background-color: #ff8545;
+    /* margin-left: 34px; */
+    border-radius: 4px;
+    border: none;
+}
+::placeholder {
+    color: white !important;
+    opacity: 1; /* Firefox */
+    font-weight: 800;
+  }
+ 
+[dir="ltr"] select.form-control {
+    padding-right: 27px;
+    background-position: right 10px center;
+}
+select.form-control:not(:disabled) {
+    cursor: pointer;
+}
+.go {
+    font-family: "Basement Grotesque";
+}
+.btn-go{
+    /* border-color: #292929; */
+    border: none;
+    border-radius: 4px;
+    background: #292929;
+    color: #ff8545;
+    font-weight: 800;
+    font-family:  sans-serif;
+}
+.or2 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 0.5px solid #ff8545;
+    line-height: 0.05em;
+    margin: 0 auto;
+     margin: 10px 0 20px; 
+}
+.or2 .por2 {
+    background: #ffffff;
+    padding: 0 10px;
+}
+.select-vehicle {
+    display: block;
+    color: #292929;
+    font-weight: 700;
+    font-size: 15.1458px;
+    line-height: 20px;
+}
+.myForm-select select {
+    background-color: transparent;
+    color: #7a7a7a;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+}
+.btn-go2{
+    border: none;
+    border-radius: 4px;
+    background: #292929;
+    color: #ff8545;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+.myForm {
+    position: absolute;
+    background-color: #ffffff;
+    line-height: 35px;
+    width: 324px;
+    color: #000000;
+    z-index: 3;
+    top: 75px;
+    left: 30px;
+    border-radius: 4px;
+    padding: 15px 33px;
+}
+.slideshow {
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+  }
+  .slide {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    
+  }
+  .slideshowDots {
+    text-align: center;
+  }
+  .slideshowDot {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 15px 7px 0px;
+    background-color: #c4c4c4;
+  }
+
+  .slideshowDot.active {
+    background-color: #6a0dad;
+  }
+
+  @media screen and (max-width:400) {
+    .slide{
+        height: 150%;
+        padding: 3%;
+        display: block;
+    }
+    .slideshow{
+        height: 600px;
+    }
+  }

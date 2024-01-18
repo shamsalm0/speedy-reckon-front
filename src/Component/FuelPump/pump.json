@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "sku":34762875,
+        "name": "FORD C-MAX ( C-Max Zetec TD 115 C214) 1.8L 2007-2011 Diesel Fuel Pumpr",
+        "imageUrl": "https://speedyreconstorage.ams3.digitaloceanspaces.com/admin_panel/images/product/Fuel-Pumps.jpg",
+        "ratings":5,
+        "price":740.90
+      },
+      {
+        "id":2,
+        "sku":2384653985,
+        "name": "AUDI A1 ( A1 Sport TDI 8X1) 1.6L 2010-2012 Diesel Fuel Pump",
+        "imageUrl": "https://speedyreconstorage.ams3.digitaloceanspaces.com/admin_panel/images/product/Fuel-Pumps.jpg",
+        "ratings":5,
+        "price":557.90
+      },
+      {
+        "id":3,
+        "sku":59527053,
+        "name": "BMW 1 SERIES ( 118d E87) 2L 2007-2009 Diesel Fuel Pump",
+        "imageUrl": "https://speedyreconstorage.ams3.digitaloceanspaces.com/admin_panel/images/product/Fuel-Pumps.jpg",
+        "ratings":5,
+        "price":631.90
+      },
+      {
+        "id":4,
+         "sku":59527053,
+      "name": "BMW 2 SERIES ( 218d Luxury Auto F45) 2L 2014-2019 Diesel Fuel Pump",
+      "imageUrl": "https://speedyreconstorage.ams3.digitaloceanspaces.com/images/default/speedyrecon-fuel-pump.jpg",
+      "ratings":5,
+      "price":621.90
+      },
+      {
+        "id":5,
+        "sku":56784345,
+        "name": "FORD C-MAX ( C-Max Style TD 115 C214) 1.8L 2007-2010 Diesel Fuel Pump",
+        "imageUrl": "https://speedyreconstorage.ams3.digitaloceanspaces.com/admin_panel/images/product/Fuel-Pumps.jpg",
+        "ratings":5,
+        "price":740.90
+      }
+]

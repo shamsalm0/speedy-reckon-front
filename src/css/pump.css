@@ -1,0 +1,11 @@
+
+@media screen and (max-width:430px){
+    .card{
+      width: 100%;
+      align-items: center;
+    }
+    .card-container{
+        display: hidden;
+        width: 100%;
+    }
+}

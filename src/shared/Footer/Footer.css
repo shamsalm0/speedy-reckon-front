@@ -1,0 +1,26 @@
+.footer-link:hover{
+color: #FFFFFF;
+margin-bottom: 0;
+}
+.footer-link{
+    font-size: 15px;
+}
+.footer-container {
+ display: flex;
+ flex-direction: column;
+  }
+.section-1{
+   
+}  
+.section-2{
+    margin-top: 0;
+}
+
+@media screen and (max-width:430px) {
+    .footer-container {
+        width: 700px;
+    }
+    .section-1{
+        width: 667px;
+    }
+}
