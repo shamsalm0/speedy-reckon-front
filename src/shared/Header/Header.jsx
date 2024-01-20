@@ -1,9 +1,10 @@
 import React from 'react';
+import NavBar from '../../Component/NavBar/NavBar';
 
 const Header = () => {
     return (
         <div>
-            <h2>hello</h2>
+            <NavBar></NavBar>
         </div>
     );
 };

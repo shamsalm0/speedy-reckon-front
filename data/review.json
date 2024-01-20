@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "comments":"Products are really greatquality. Satisfied after sales service. I am very much pleased. Thank youSpeedyRecon",
+        "name": "Howard Chavez",
+        "imageUrl": "https://speedyrecon.com/customer_frontend/images/people/29.jpg"
+      },
+      {
+        "id":2,
+        "comments":"Awesome injector i haveever had for my BMW 2 series. Using from long since. No Issue at all.",
+        "name": "Artem K",
+        "imageUrl": "https://speedyrecon.com/customer_frontend/images/people/33.jpg"
+      },
+      {
+        "id":3,
+        "comments": "Brilliant service. Dealt with immediately. Perfect shopping experience.",
+        "name": "Jason C",
+        "imageUrl": "https://speedyrecon.com/customer_frontend/images/people/37.jpg"
+      },
+      {
+        "id":4,
+         "comments":"Greatcustomer support.On-time delivery. Will reach to SpeedyRecon again soon."
+         ,
+      "name": "Lucas Elliot",
+      "imageUrl": "https://speedyrecon.com/customer_frontend/images/people/67.jpg"
+      },
+      {
+        "id":5,
+        "comments":"Veryprofessional service, ordered on line ,all parts in stock ..plus a phone to inform me that my parts wereready for collection.",
+        "name": "Peter L",
+        "imageUrl": "https://speedyrecon.com/customer_frontend/images/people/72.jpg"
+      },
+      {
+        "id":6,
+        "comments":"Ordered parts on lineearly afternoon - picked them up on the way home that evening what more can you askfor.",
+        "name": "Paul G",
+        "imageUrl": "https://speedyrecon.com/customer_frontend/images/people/91.jpg"
+      },
+      {
+        "id":7,
+        "comments":"Ordered parts on lineearly afternoon - picked them up on the way home that evening what more can you askfor.",
+        "name": "Paul G",
+        "imageUrl": "https://speedyrecon.com/customer_frontend/images/people/91.jpg"
+      },
+      {
+        "id":8,
+        "comments":"Consistently goodservice. Great service arrived on timemen.",
+        "name": "John C",
+        "imageUrl": "https://speedyrecon.com/customer_frontend/images/people/61.jpg"
+      },
+      {
+        "id":9,
+        "comments":"Products are really greatquality. Satisfied after sales service. I am very much pleased. Thank youSpeedyRecon.",
+        "name": "William F",
+        "imageUrl": "https://speedyrecon.com/customer_frontend/images/people/52.jpg"
+      }
+]

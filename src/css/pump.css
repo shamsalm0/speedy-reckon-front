@@ -8,4 +8,7 @@
         display: hidden;
         width: 100%;
     }
+    .btn-container{
+        width: fit-content;
+    }
 }

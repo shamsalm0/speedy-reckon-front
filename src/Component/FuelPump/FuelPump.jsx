@@ -37,6 +37,7 @@ const FuelPump = () => {
 
   const handleForward = () => {
     setCurrentPosition((prevPosition) => (prevPosition + 1) % pumps.length);
+    console.log(currentPosition);
   };
 
   const handleBackward = () => {
@@ -47,8 +48,8 @@ const FuelPump = () => {
 
   return (
     <div>
-      <div className='flex lg:justify-between mx-auto mb-8' style={{ width: '1200px' }}>
-        <h2 className='text-[#262626] text-2xl font-serif font-bold'>Fuel Pump</h2>
+      <div className='flex   lg:justify-between mx-auto lg:flex-row-auto mb-8 btn-container' style={{ width: '1200px' }}>
+        <h2 className='text-[#262626] text-xl lg:text-2xl font-serif font-bold'>Fuel Pump</h2>
         <div className='mr-0'>
           <button className='h-5 w-5 bg-[#FF7F3C] mr-1' onClick={handleForward}>
             <MdArrowForwardIos className='' />
@@ -61,10 +62,11 @@ const FuelPump = () => {
       <div className={`lg:flex justify-center card-container gap-2`}>
         {pumps.map((pump, index) => (
           <div key={pump.id} className={`card ${isSmallScreen && index !== currentPosition ? 'hidden' : ''}`}>
-            <PumpCard pump={pump} />
+            <PumpCard pump={pumps[(index + currentPosition) % pumps.length]} />
           </div>
         ))}
       </div>
+      <div style={{height:'52px'}}></div>
     </div>
   );
 };
