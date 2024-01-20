@@ -119,7 +119,7 @@ const NavBar = () => {
                 </section>
                 <section>
                     <div className="top_header__row flex justify-around items-center" style={{
-                        padding:'20px 0'
+                        padding:' 0'
                     }}>
                         <div >
 
@@ -254,7 +254,7 @@ const NavBar = () => {
 
                                 <div className="logo__image">
 
-                                    <img className='w-28 h-11 lg:w-60 lg:h-22' src="https://speedyrecon.com/customer_frontend/speedyLogo.webp" alt="Logo" />
+                                    <img className='w-28 h-22 lg:w-60 lg:h-22' src="https://speedyrecon.com/customer_frontend/speedyLogo.webp" alt="Logo" />
 
                                 </div>
                             </a>
@@ -339,7 +339,7 @@ const NavBar = () => {
                     </div>
                 </section>
                 <section>
-                    <div className="header__navbar lg:flex justify-start hidden" style={{background:"#FF7F3C", color:"#ffff", marginTop:"30px",height:"47px"}}>
+                    <div className="header__navbar lg:flex justify-start hidden" style={{background:"#FF7F3C", color:"#ffff", marginTop:"80px",height:"47px"}}>
                         <div className="header__navbar-departments ">
                             <div className="departments ">
                                 <button onClick={toggleDropdownCat} className="departments__button flex items-center " type="button">
@@ -602,7 +602,7 @@ const NavBar = () => {
                             <div className="main-menu">
                                 <ul className="main-menu__list gap-10 mr-80 menu-title">
                                     <li className="main-menu_item">
-                                        <a href="https://speedyrecon.com/" className="main-menu__link">
+                                        <a href="https://speedyrecon.com/" className="main-menu__link  mx-5 hover:bg-black text-white">
                                             Home
 
                                         </a>
@@ -610,7 +610,7 @@ const NavBar = () => {
                                     <span className="menu-border-right"></span>
                                     <li className="main-menu_item main-menuitem--submenu--menu main-menu_item--has-submenu  ">
 
-                                        <a href="https://speedyrecon.com/brand_list/3" className="main-menu__link">
+                                        <a href="https://speedyrecon.com/brand_list/3" className="main-menu__link text-white">
                                             Injector
 
                                         </a>
@@ -619,7 +619,7 @@ const NavBar = () => {
                                     <li className="main-menu_item main-menuitem--submenu--menu main-menu_item--has-submenu  ">
 
                                         <a href="https://speedyrecon.com/brand_list/4" className="main-menu__link ">
-                                            <p className='w-24'>Fuel Pump</p>
+                                            <p className='w-24 text-white'>Fuel Pump</p>
 
                                         </a>
                                     </li>
@@ -627,14 +627,14 @@ const NavBar = () => {
 
 
                                     <li className="main-menu_item">
-                                        <a href="https://speedyrecon.com/about-us" className="main-menu__link ">
+                                        <a href="https://speedyrecon.com/about-us" className="main-menu__link text-white">
                                             <p className='w-24'>About Us</p>
 
                                         </a>
                                     </li>
                                     <span className="menu-border-right"></span>
                                     <li className="main-menu_item">
-                                        <a href="https://speedyrecon.com/contact-us" className="main-menu__link">
+                                        <a href="https://speedyrecon.com/contact-us" className="main-menu__link text-white">
                                             <p className='w-24'>Contact Us</p>
 
                                         </a>
@@ -648,7 +648,7 @@ const NavBar = () => {
                     </div>
                 </section>
             </div>
-
+          <div className='lg:h-8'></div>
             
         </div>
     );

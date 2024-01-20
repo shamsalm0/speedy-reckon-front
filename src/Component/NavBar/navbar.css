@@ -65,14 +65,18 @@
   font-size: 13px;
   
 }
+.menu-title:hover{
+  background-color: black;
+}
 .header__navbar {
   width: 100%;
   margin-top: 2px !important;
   padding: 7px 100px;
 }
-a.main-menu_link{
+.main-menu_link{
   width:100px;
   font-size: 13px;
+  color: #FFFFFF;
 }
 
 
@@ -90,6 +94,7 @@ a.main-menu_link{
   .header-container{
     height: 50px;
   }
+  
 }
 
 /*style={{borderRadius:"100px",width:'848px',height:'44px',color:'black'}}*/

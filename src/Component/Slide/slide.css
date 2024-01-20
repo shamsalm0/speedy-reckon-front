@@ -153,7 +153,7 @@ select.form-control:not(:disabled) {
     width: 324px;
     color: #000000;
     z-index: 1;
-    top: 195px;
+    top: 235px;
     left: 30px;
     border-radius: 4px;
     padding: 15px 33px;
@@ -190,13 +190,10 @@ select.form-control:not(:disabled) {
     background-color: #6a0dad;
   }
 
-  @media screen and (max-width:400) {
-    .slide{
-        height: 150%;
-        padding: 3%;
-        display: block;
+  @media screen and (max-width:400px) {
+    .myForm{
+        position: absolute;
+        top: 50px;
     }
-    .slideshow{
-        height: 600px;
-    }
+   
   }

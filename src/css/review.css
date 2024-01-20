@@ -1,0 +1,19 @@
+
+.social-container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:700px){
+    .th-image1{
+        width: 338px;
+        margin-left: 10px;
+    }
+
+    .th-image2{
+        width: 170px;
+    }
+    .social-container{
+        width: 400px;
+    }
+}
