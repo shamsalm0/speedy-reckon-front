@@ -10,26 +10,26 @@ const Footer = () => {
     return (
         <div className='footer-container'>
             <section className='bg-[#292929] w-full section1'>
-                <footer className="footer  lg:grid lg:grid-cols-4 lg:gap-0  grid grid-cols-2 py-14 px-24 bg-[#292929] text-[#A1A1A1]">
+                <footer className="footer  lg:grid lg:grid-cols-4 lg:gap-0   grid grid-cols-2 py-14 lg:px-24 bg-[#292929] text-[#A1A1A1]">
                     <nav>
-                        <header className="font-bold text-[#FFFFFF] text-xl">Customer Service</header>
+                        <header className="font-bold text-[#FFFFFF] lg:text-xl">Customer Service</header>
                         <Link to='#' className="footer-link">Store Locator</Link>
                         <Link to='#' className="footer-link">Contact Us</Link>
                         <Link to='#' className="footer-link">Returns and Refunds</Link>
                         <br />
-                        <header className='font-bold text-[#FFFFFF] text-xl'>Opening Times</header>
+                        <header className='font-bold text-[#FFFFFF] lg:text-xl'>Opening Times</header>
                         <p className="">Monday - Friday: 9 am - 5 pm (UK time)</p>
                         <br />
-                        <header className='font-bold text-[#FFFFFF] text-xl'>Hotline</header>
+                        <header className='font-bold text-[#FFFFFF] lg:text-xl'>Hotline</header>
                         <p className="">0800 02 48 55 8, 0770 86 86 86 1</p>
                     </nav>
                     <nav>
-                        <header className="font-bold text-[#FFFFFF] text-xl">Who We Are</header>
+                        <header className="font-bold text-[#FFFFFF] lg:text-xl">Who We Are</header>
                         <Link to='#' className="footer-link">About us</Link>
                         <Link to='#' className="footer-link">Terms and Condition</Link>
                         <Link to='#' className="footer-link">Privacy and Policy</Link>
                         <br />
-                        <header className='font-bold text-[#FFFFFF] text-xl'>Our Address</header>
+                        <header className='font-bold text-[#FFFFFF] lg:text-xl'>Our Address</header>
                         <Link to='#'><span>London, UK</span>
                         <br />
                             <span>Email: reconspeedy@gmail.com</span> <br />
@@ -53,7 +53,7 @@ const Footer = () => {
                                 <span className="label-text">Enter your email address</span>
                             </label>
                             <div className="">
-                                <input type="text" placeholder="" className="input input-bordered " />
+                                <input type="text" placeholder="" className="input  " />
                                 <br />
                                 <button className="btn bg-[#C94A00] lg:my-3 text-base leading-5">Subscribe</button>
                             </div>

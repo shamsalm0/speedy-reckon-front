@@ -48,7 +48,7 @@ const FuelPump = () => {
 
   return (
     <div>
-      <div className='flex   lg:justify-between mx-auto lg:flex-row-auto mb-8 btn-container' style={{ width: '1200px' }}>
+      <div className='flex   lg:justify-between items-center mx-auto lg:flex-row-auto mb-8 btn-container' style={{ width: '1200px' }}>
         <h2 className='text-[#262626] text-xl lg:text-2xl font-serif font-bold'>Fuel Pump</h2>
         <div className='mr-0'>
           <button className='h-5 w-5 bg-[#FF7F3C] mr-1' onClick={handleForward}>

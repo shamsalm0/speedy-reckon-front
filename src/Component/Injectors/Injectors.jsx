@@ -55,7 +55,7 @@ const Injectors = () => {
 
   return (
     <div className=''>
-      <div className='flex lg:justify-between  mx-auto mb-8' style={{width:'1200px'}}>
+      <div className='flex lg:justify-between items-center mx-auto mb-8' style={{width:'1200px'}}>
   <h2 className='text-[#262626] text-2xl font-serif font-bold'>Injectors</h2>
   <div className=' mr-0'>
           <button className='h-5 w-5 bg-[#FF7F3C] mr-1' onClick={handleForward}><MdArrowForwardIos className=''/></button>

@@ -16,11 +16,20 @@ margin-bottom: 0;
     margin-top: 0;
 }
 
-@media screen and (max-width:430px) {
+@media screen and (max-width:700px) {
     .footer-container {
-        width: 700px;
+        width: 400px;
     }
-    .section-1{
-        width: 667px;
+    .footer{
+        width: 367px;
+        margin-left: 5px;
+    }
+    .footer-link{
+        font-size: 12px;
+    }
+    .input{
+        height: 5px;
+        width: 150px;
+        margin-bottom: 2px;
     }
 }
