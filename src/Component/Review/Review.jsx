@@ -46,7 +46,7 @@ const Review = () => {
                     <h2 className='font-sans font-bold text-3xl'>Here what Our Customer Have to Say</h2>
                     <p className='font-sans text-base font-normal text-[#5E5E5E] leading-7'>During Our Work We Have Accumulated <br /> Hundreds of Positive Reviews</p>
                 </div>
-                <div className='lg:flex lg:justify-center gap-2 mb-5'>
+                <div className='lg:flex lg:justify-center sm:ml-48 gap-2 mb-5'>
                     {
                         clients.slice(setIndex * 3, setIndex * 3 + 3).map(client => <ReviewCard key={client.id} client={client}></ReviewCard>)
                     }
@@ -69,7 +69,7 @@ const Review = () => {
             </div>
             <div style={{ height: '100px' }}></div>
             <section>
-                <div className='lg:grid grid-cols-2 lg:grid-cols-4 flex flex-wrap gap-1 social-container' >
+                <div className='lg:grid grid-cols-2 lg:grid-cols-4 flex flex-wrap gap-1 social-container sm:ml-20' >
                     <div className='w-40 h-24 '>
                         <p className='text-semibold text-[#ffc711]  text-xl flex justify-center mb-4 ml-1'><FaStar className='w-3 h-3' /><FaStar className='w-3 h-3' /><FaStar className='w-3 h-3' /><FaStar className='w-3 h-3' /><FaStar className='w-3 h-3' /></p>
                         <div className='flex justify-center'>
@@ -102,7 +102,7 @@ const Review = () => {
             </section>
             <div style={{ height: '100px' }}></div>
             <section>
-                <div className='lg:grid lg:grid-cols-12 lg:gap-14 lg:ml-36' style={{width:'1200px'}}>
+                <div className='lg:grid lg:grid-cols-12 lg:gap-14 lg:ml-36 sm:ml-20' style={{width:'1200px'}}>
                     <div className='lg:col-span-6 th-image1' style={{height:'600px'}}>
                         <img className='rounded-lg th-image1' src="https://speedyrecon.com/customer_frontend/images/review11_1.WebP" style={{height:'438px', width:'638px'}}  alt="" />
                     </div>

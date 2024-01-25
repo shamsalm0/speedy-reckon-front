@@ -25,7 +25,7 @@ const center = {
       }
     return (
         <div >
-            <GoogleMap
+            <GoogleMap 
         mapContainerStyle={mapContainerStyle}
         zoom={10}
         center={center}

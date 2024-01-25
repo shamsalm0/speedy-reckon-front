@@ -9,31 +9,42 @@ const FuelPump = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 600);
 
   useEffect(() => {
-    // Fetch data when the component mounts
     const fetchData = async () => {
       try {
-        // Import the JSON file
         const response = await import('./pump.json');
         setPumps(response.default);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
-
+  
     fetchData();
-
-    // Update isSmallScreen on window resize
+  
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 600);
+      const screenWidth = window.innerWidth;
+      //setIsSmallScreen(screenWidth <= 600);
+      //setIsMediumScreen(screenWidth > 600 && screenWidth <= 1050);
+  
+      setPumps(prevInjectors => {
+        if (screenWidth <= 600) {
+          return prevInjectors.slice(0, 1);
+        } else if (screenWidth > 600 && screenWidth <= 1050) {
+          return prevInjectors.slice(0, 3);
+        } else {
+          return pumps; // Use the original state for other cases
+        }
+      });
     };
-
+  
+    handleResize();
+  
     window.addEventListener('resize', handleResize);
-
-    // Cleanup event listener on component unmount
+  
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
 
   const handleForward = () => {
     setCurrentPosition((prevPosition) => (prevPosition + 1) % pumps.length);
@@ -59,9 +70,9 @@ const FuelPump = () => {
           </button>
         </div>
       </div>
-      <div className={`lg:flex justify-center card-container gap-2`}>
+      <div className={`flex justify-center card-container gap-2`}>
         {pumps.map((pump, index) => (
-          <div key={pump.id} className={`card ${isSmallScreen && index !== currentPosition ? 'hidden' : ''}`}>
+          <div key={pump.id} >
             <PumpCard pump={pumps[(index + currentPosition) % pumps.length]} />
           </div>
         ))}

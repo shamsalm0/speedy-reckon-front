@@ -7,6 +7,7 @@ const PumpCard = ({pump}) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const truncatedName = isExpanded ? name : name.slice(0, 28);
+  
     return (
         <div className="card card-compact w-60 bg-base-100 shadow-xl">
         <figure><img src={imageUrl} style={{height:'236px',width:'236px'}} alt="Shoes" /></figure>
