@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaPhone } from "react-icons/fa";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaRegUser } from "react-icons/fa";
 import { IoIosMenu } from "react-icons/io";
@@ -44,10 +44,10 @@ const NavBar = () => {
             <div className='header-container' >
                 <section>
                     <div className=" hidden  lg:flex lg:justify-between ">
-                        <div className="hidden bg-[#EDEDED] lg:flex lg:gap-6 lg:items-center h-9 lg:flex-shrink lg:flex-grow">
+                        <div className="hidden bg-[#f3f4f5] lg:flex lg:gap-6 lg:items-center h-9 lg:flex-shrink lg:flex-grow">
                             <div className="phone_top">
                                 <a href="tel:08000248558">
-                                    <div className='flex items-center gap-1 text-sm text-[#C94A00] font-sans' style={{ fontWeight: '700' }}>
+                                    <div className='flex items-center gap-1 text-sm text-[#C94A00] font-sans' style={{ fontWeight: '700',fontFamily:'Open Sans,sans-serif'}}>
                                         <FaPhone className='rotating-icon'></FaPhone>
                                         &nbsp;&nbsp;0800 02 48 55 8  <div className='bg-[#ddd] h-4 ml-3 ' style={{ width: '1px' }}></div>
                                     </div>
@@ -56,27 +56,27 @@ const NavBar = () => {
                             <div>
                                 <div className="phone_top">
                                     <a href="tel:07708686861">
-                                        <div className='flex items-center text-sm text-[#C94A00] font-sans' style={{ fontWeight: '700' }}>
+                                        <div className='flex items-center text-sm text-[#C94A00] font-sans' style={{ fontWeight: '700',fontFamily:'Open Sans,sans-serif' }}>
                                             <FaPhone className='rotating-icon'></FaPhone>
                                             &nbsp;&nbsp;0770 86 86 86 1 <div className='bg-[#ddd] h-4 ml-3 ' style={{ width: '1px' }}></div>
                                         </div>
                                     </a>
                                 </div>
                             </div>
-                            <div className='text-[#262626] text-sm'>
+                            <div className='text-[#262626] text-sm'style={{fontFamily:'Open Sans,sans-serif'}}>
                                 Mon - Thu 08:00 - 17:00, Fri 08:00 - 16:00
                             </div>
                         </div>
-                        <div className="topbar--item topbar--right bg-[#EDEDED] flex justify-end gap-6 items-center h-9 flex-shrink flex-grow">
+                        <div className="topbar--item topbar--right bg-[#f3f4f5] flex justify-end gap-3 items-center h-9 flex-shrink flex-grow"style={{fontSize:'13.5px',fontFamily:'Open Sans,sans-serif',color:'#666666'}}>
                             <div className="">
                                 <p><a href="/terms-and-conditions">Terms &amp; Condition</a></p>
-                            </div>
+                            </div><div className='bg-[#ddd] h-4  ' style={{ width: '1px' }}></div>
                             <div className="">
                                 <p><a href="/privacy-policy">Privacy Policy</a></p>
-                            </div>
+                            </div><div className='bg-[#ddd] h-4  ' style={{ width: '1px' }}></div>
                             <div onMouseEnter={toggleDropdownLang} className=" relative topbar-dropdown">
                                 <div className="language list-dropdown flex items-center">
-                                    <span className="current flex items-center">
+                                    <span className="current flex items-center gap-1">
                                         <img src="https://drfurithemes.com/farmart/wp-content/themes/farmart-child/images/flag-en.png" alt="English" />English
                                         <span className="farmart-svg-icon ">
                                             <IoIosArrowDown  ></IoIosArrowDown>
@@ -92,7 +92,7 @@ const NavBar = () => {
                                         )
                                     }
                                 </div>
-                            </div>
+                            </div> <div className='bg-[#ddd] h-4  ' style={{ width: '1px' }}></div>
                             <div onMouseEnter={toggleDropdownCur} className="widgets farmart-currency-widgets topbar-dropdown">
                                 <div className="farmart-currency ">
                                     <div className="dropdown flex items-center">
@@ -123,7 +123,7 @@ const NavBar = () => {
                     }}>
                         <div >
 
-                            <label className='lg:hidden md:hidden'>
+                            <label className='lg:hidden '>
 
                                 <button onClick={handleToggle}><IoIosMenu /></button>
                             </label>
@@ -262,14 +262,15 @@ const NavBar = () => {
 
                         <div className="header__search">
                             <div className="search">
-                                <form action="https://speedyrecon.com/get_all_products" className="search__body mx-auto" >
+                                <form action="https://speedyrecon.com/get_all_products" className="search__body m-auto flex items-center" >
                                     <div className="search__shadow"></div>
                                     <input type="text" id='search_product'
-                                        className="bg-[#ededed] hidden lg:block mt-3 text-center text-black font-normal "
-                                        placeholder='search here' />
+                                        className="bg-[#ededed] hidden   lg:block mt-2 text-black font-normal "
+                                        placeholder='Search Products' />
 
                                     <button className="search__button search__button--end" type="submit">
-                                        <span className="search__button-icon">
+                                        <span className="">
+                                        <IoIosSearch className='search__button-icon text-xl' />
                                         </span>
                                     </button>
                                     <div className="search__box"></div>
@@ -281,27 +282,27 @@ const NavBar = () => {
                             </div>
                         </div>
 
-                        <div className="header__indicators flex items-center">
-                            <div className="pr-3">
+                        <div className="header__indicators flex items-center justify-start">
+                            <div className="pr-3 ">
                                 <a href="https://speedyrecon.com/cart" className="indicator__button">
                                     <span className="indicator__icon">
 
-                                        <span className="indicator__counter count" id="count">
+                                        <span className="indicator__counter count bg-red-400 w-2 h-2 p-0.5 mt-1 text-xs text-white" id="count" style={{fontSize:'10px'}}>
                                             0
                                         </span>
-                                        <FiShoppingCart />
+                                        <FiShoppingCart className='mb-4 h-8 w-8'/>
                                     </span>
                                 </a>
                             </div>
                             <div className="indicator indicator--trigger--click header-element--account">
                                 <button onClick={toggleDropdownUser} className="indicator__button" >
                                     <span className="indicator__icon">
-                                        <FaRegUser ></FaRegUser>
+                                        <FaRegUser className='w-8 h-8'></FaRegUser>
                                     </span>
                                 </button>
                                 {
                                     isUserOpen && (
-                                        <div className="indicator__content">
+                                        <div className="indicator__content"style={{position:'absolute',zIndex:'1',right:'20px',top:'60px',backgroundColor:'white',width:'280px',height:'305px'}}>
                                             <div className="account-menu">
 
 
@@ -342,7 +343,7 @@ const NavBar = () => {
                     <div className="header__navbar lg:flex justify-start hidden" style={{background:"#FF7F3C", color:"#ffff", marginTop:"80px",height:"47px"}}>
                         <div className="header__navbar-departments ">
                             <div className="departments ">
-                                <button onClick={toggleDropdownCat} className="departments__button flex items-center " type="button">
+                                <button onClick={toggleDropdownCat} className="departments__button flex gap-6 px-10 items-center hover:bg-black" type="button">
                                     <span className="departments__button-icon ">
                                         <svg className='text-white' width="16px" height="12px" style={{color:'white'}}>
                                             <path style={{fill:'white'}} d="M0,7L0,5L16,5L16,7L0,7ZM0,0L16,0L16,2L0,2L0,0ZM12,12L0,12L0,10L12,10L12,12Z"></path>
@@ -598,43 +599,49 @@ const NavBar = () => {
 }
                             </div>
                         </div>
+                        
+                        <span className="menu-border-right " style={{width:'1px',height:'22px',backgroundColor:'#FFAD82',marginTop:'8px'}}></span>
                         <div className="header__navbar-menu ">
                             <div className="main-menu">
-                                <ul className="main-menu__list gap-10 mr-80 menu-title">
+                                <ul className="main-menu__list gap-5 mr-80 menu-title">
                                     <li className="main-menu_item">
                                         <a href="https://speedyrecon.com/" className="main-menu__link  mx-5 hover:bg-black text-white">
                                             Home
 
                                         </a>
+                                        
                                     </li>
-                                    <span className="menu-border-right"></span>
+                                    
+                                    <span className="menu-border-right " style={{width:'1px',height:'22px',backgroundColor:'#FFAD82',marginBottom:'4px'}}></span>
                                     <li className="main-menu_item main-menuitem--submenu--menu main-menu_item--has-submenu  ">
 
-                                        <a href="https://speedyrecon.com/brand_list/3" className="main-menu__link text-white">
+                                        <a href="https://speedyrecon.com/brand_list/3" className="main-menu__link hover:bg-black text-white">
                                             Injector
 
                                         </a>
                                     </li>
-                                    <span className="menu-border-right"></span>
+                                    
+                                    <span className="menu-border-right " style={{width:'1px',height:'22px',backgroundColor:'#FFAD82',marginBottom:'4px'}}></span>
                                     <li className="main-menu_item main-menuitem--submenu--menu main-menu_item--has-submenu  ">
 
-                                        <a href="https://speedyrecon.com/brand_list/4" className="main-menu__link ">
+                                        <a href="https://speedyrecon.com/brand_list/4" className="main-menu__link hover:bg-black">
                                             <p className='w-24 text-white'>Fuel Pump</p>
 
                                         </a>
                                     </li>
-                                    <span className="menu-border-right"></span>
+                                    
+                                    <span className="menu-border-right " style={{width:'1px',height:'22px',backgroundColor:'#FFAD82',marginBottom:'4px'}}></span>
 
 
                                     <li className="main-menu_item">
-                                        <a href="https://speedyrecon.com/about-us" className="main-menu__link text-white">
+                                        <a href="https://speedyrecon.com/about-us" className="main-menu__link text-white hover:bg-black">
                                             <p className='w-24'>About Us</p>
 
                                         </a>
                                     </li>
-                                    <span className="menu-border-right"></span>
+                                    <span className="menu-border-right " style={{width:'1px',height:'22px',backgroundColor:'#FFAD82',marginBottom:'4px'}}></span>
                                     <li className="main-menu_item">
-                                        <a href="https://speedyrecon.com/contact-us" className="main-menu__link text-white">
+                                        <a href="https://speedyrecon.com/contact-us" className="main-menu__link text-white hover:bg-black">
                                             <p className='w-24'>Contact Us</p>
 
                                         </a>

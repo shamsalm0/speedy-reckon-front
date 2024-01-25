@@ -7,39 +7,48 @@ import InjectorCard from './InjectorCard';
 const Injectors = () => {
   const [injectors, setInjectors] = useState([]);
   const [currentPosition, setCurrentPosition] = useState(0);
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 600);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isMediumScreen, setIsMediumScreen] = useState(false);
   console.log(window.innerWidth)
-  const cardContainerStyle = {
-    
-    transform: 'translate3d(-1792px, 0px, 0px)', 
-    transition: 'all 0.5s ease 0s; width: 3840px'
-  };
+
 
  
 
   useEffect(() => {
-    // Fetch data when the component mounts
     const fetchData = async () => {
       try {
-        // Import the JSON file
         const response = await import('./injectors.json');
         setInjectors(response.default);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
-
+  
     fetchData();
-
-    const handleResize = () =>{
-      setIsSmallScreen(window.innerWidth <= 600);
-    }
-
-    window.addEventListener('resize',handleResize);
-
-    return ()=>{
-      window.removeEventListener('resize',handleResize)
-    }
+  
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      setIsSmallScreen(screenWidth <= 600);
+      setIsMediumScreen(screenWidth > 600 && screenWidth <= 1050);
+  
+      setInjectors(prevInjectors => {
+        if (screenWidth <= 600) {
+          return prevInjectors.slice(0, 1);
+        } else if (screenWidth > 600 && screenWidth <= 1050) {
+          return prevInjectors.slice(0, 3);
+        } else {
+          return injectors; // Use the original state for other cases
+        }
+      });
+    };
+  
+    handleResize();
+  
+    window.addEventListener('resize', handleResize);
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const handleForward = () => {
@@ -58,19 +67,19 @@ const Injectors = () => {
       <div className='flex lg:justify-between items-center mx-auto mb-8' style={{width:'1200px'}}>
   <h2 className='text-[#262626] text-2xl font-serif font-bold'>Injectors</h2>
   <div className=' mr-0'>
-          <button className='h-5 w-5 bg-[#FF7F3C] mr-1' onClick={handleForward}><MdArrowForwardIos className=''/></button>
+          <button className='h-5 w-5 bg-[#FF7F3C] transform skewX-45  mr-1' onClick={handleForward}><MdArrowForwardIos className=''/></button>
         <button className='h-5 w-5 bg-[#FF7F3C]' onClick={handleBackward}><MdArrowBackIos className='ml-1'/></button>
   </div>
       </div>
       <div className='flex justify-center gap-2 'style={{}} >
         {injectors.map((injector, index) => (
-          <div key={injector.id} className={`card  ${isSmallScreen && index !== currentPosition ? 'hidden' : ''}`}>
+          <div key={injector.id} >
             <InjectorCard className='card-container' injector={injectors[(index + currentPosition) % injectors.length]} />
           </div>
         ))}
       </div>
       <div style={{height:'52px'}}></div>
-      <div style={{backgroundColor:'#c94a0014'}} className="container p-3 mx-auto w-4/5">
+      <div style={{backgroundColor:'#c94a0014'}} className="container p-3 mx-auto w-5/6">
                 <h3  style={{textAlign:"center",fontSize:'28px',fontWeight:'500'}}>The most common types of fuel injector failure</h3>
 <p className='block'>When fuel injectors fail, many are left wondering what happened. The truth is, fuel injector failure can be caused by a number of things that can be difficult to diagnose. However, arming yourself with an understanding of how and why fuel injectors can fail, appropriate diagnostic procedures, and important... <a className='text-[#c94a00]' href="/purchase-policy">Read More</a>
             </p>
@@ -78,16 +87,16 @@ const Injectors = () => {
    
             </div>
             <div style={{height:'52px'}}></div>
-            <div className='lg:flex justify-center  mx-auto'>
-              <div className="bg-[url('https://speedyrecon.com/customer_frontend/images/injector_banner_1.WebP')] bg-cover lg:w-5/12  h-52 lg:ml-32 mx-auto">
-                <div className='h-52 m-2 py-8 px-9'>
+            <div className='lg:flex lg:justify-center   mx-auto w-full'>
+              <div className="bg-[url('https://speedyrecon.com/customer_frontend/images/injector_banner_1.WebP')] bg-cover lg:w-2/5  h-52 lg:ml-32 mx-auto rounded-md">
+                <div className='h-52 m-2 py-8 px-9 '>
                 <h2 className='text-white text-3xl font-bold font-sans'>INJECTORS</h2>
                 <p className='text-white text-base font-semibold font-sans mt-3'>High Quality Remanufactures Fuel Injectors</p>
                 <button className=' h-7 px-4 mt-3 text-white font-semibold font-sans bg-[#FF8545]'>Shop Now</button>
                 </div>
               </div>
-              <div className='lg:w-10 h-10'></div>
-              <div className="bg-[url('https://speedyrecon.com/customer_frontend/images/fuel_pump_banner_2.WebP')]  bg-cover lg:w-5/12 h-52 lg:mr-24 mx-auto">
+              <div className='lg:w-1 h-10'></div>
+              <div className="bg-[url('https://speedyrecon.com/customer_frontend/images/fuel_pump_banner_2.WebP')]  bg-cover lg:w-2/5 lg:h-52 lg:mr-32 mx-auto rounded-md">
               <div className='h-52 m-2 py-8 px-9'>
                 <h2 className='text-white text-3xl font-bold font-sans'>FUEL PUMPS</h2>
                 <p className='text-white text-base font-semibold font-sans mt-3 bg-[#262626] bg-gradient-to-r from-[rgba(38,38,38,20)] to-[rgba(38,38,38,0)]'>High Quality Remanufactures Fuel Pumps</p>

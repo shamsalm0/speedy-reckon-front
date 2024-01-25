@@ -6,7 +6,7 @@ const BlockFeat = () => {
             <div className="block-features block mt-5 mb-5">
     <div className="container">
         <ul className="block-features__list">
-            <li className="block-features__item flex">
+            <li className="block-features__item ">
                 <div className="block-features__item-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62" fill="none" style={{width:"66.61px", height: "66.61px"}}>
                         <circle cx="31" cy="31" r="31" fill="#FF7F3C" fillOpacity="0.1"></circle>

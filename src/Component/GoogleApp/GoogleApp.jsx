@@ -3,16 +3,16 @@ import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 const GoogleApp = () => {
     const libraries = ['places'];
 const mapContainerStyle = {
-  width: '100vw',
+  width: '80vw',
   height: '100vh',
-  
+  margin:'auto'
 };
 const center = {
   lat: 7.2905715, // default latitude
   lng: 80.6337262, // default longitude
 };
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: 'AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo',
+        googleMapsApiKey: '',
         libraries,
       });
     
@@ -32,6 +32,8 @@ const center = {
       >
         <Marker position={center} />
       </GoogleMap>
+
+      <div className='h-20'></div>
         </div>
     );
 };

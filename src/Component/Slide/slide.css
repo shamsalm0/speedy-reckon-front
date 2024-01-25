@@ -153,8 +153,8 @@ select.form-control:not(:disabled) {
     width: 324px;
     color: #000000;
     z-index: 1;
-    top: 235px;
-    left: 30px;
+    top: 252px;
+    left: 120px;
     border-radius: 4px;
     padding: 15px 33px;
 }
@@ -190,10 +190,23 @@ select.form-control:not(:disabled) {
     background-color: #6a0dad;
   }
 
-  @media screen and (max-width:400px) {
+  @media screen and (max-width:700px) {
     .myForm{
         position: absolute;
-        top: 50px;
+        top: 100px;
+        width: 324px;
+        right:450px;
+        left:50px;
+    }
+   
+  }
+  @media screen and (min-width:701px) and (max-width:1020px) {
+    .myForm{
+        position: absolute;
+        top: 112px;
+        width: 324px;
+        
+        left:120px;
     }
    
   }
