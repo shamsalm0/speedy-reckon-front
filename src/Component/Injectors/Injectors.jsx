@@ -23,29 +23,19 @@ const Injectors = () => {
         console.error('Error fetching data:', error);
       }
     };
-  
+
     fetchData();
-  
+
     const handleResize = () => {
       const screenWidth = window.innerWidth;
       setIsSmallScreen(screenWidth <= 600);
       setIsMediumScreen(screenWidth > 600 && screenWidth <= 1050);
-  
-      setInjectors(prevInjectors => {
-        if (screenWidth <= 600) {
-          return prevInjectors.slice(0, 1);
-        } else if (screenWidth > 600 && screenWidth <= 1050) {
-          return prevInjectors.slice(0, 3);
-        } else {
-          return injectors; // Use the original state for other cases
-        }
-      });
     };
-  
+
     handleResize();
-  
+
     window.addEventListener('resize', handleResize);
-  
+
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -73,9 +63,9 @@ const Injectors = () => {
       </div>
       <div className='flex justify-center gap-2 'style={{}} >
         {injectors.map((injector, index) => (
-          <div key={injector.id} >
-            <InjectorCard className='card-container' injector={injectors[(index + currentPosition) % injectors.length]} />
-          </div>
+          <div key={injector.id} className={`card  ${isSmallScreen && index !== currentPosition ? 'hidden' : ''} ${isMediumScreen && index > 2 ? 'hidden' : ''}`}>
+          <InjectorCard className='card-container' injector={injectors[(index + currentPosition) % injectors.length]} />
+        </div>
         ))}
       </div>
       <div style={{height:'52px'}}></div>
