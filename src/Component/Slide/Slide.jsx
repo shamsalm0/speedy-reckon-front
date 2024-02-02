@@ -24,7 +24,7 @@ const Slide = () => {
         return () => { resetTimeout() };
     }, [index]);
     return (
-        <div>
+        <div className=''>
             <div className="slideshow">
                 <div className="myForm">
                     <div className="text-center">

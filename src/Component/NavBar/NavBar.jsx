@@ -118,8 +118,8 @@ const NavBar = () => {
                     </div>
                 </section>
                 <section>
-                    <div className="top_header__row flex justify-around items-center" style={{
-                        padding:' 0'
+                    <div className="top_header__row flex justify-around items-center pt-2" style={{
+                        
                     }}>
                         <div >
 
@@ -263,20 +263,10 @@ const NavBar = () => {
                         <div className="header__search">
                             <div className="search">
                                 <form action="https://speedyrecon.com/get_all_products" className="search__body m-auto flex items-center" >
-                                    <div className="search__shadow"></div>
-                                    <input type="text" id='search_product'
-                                        className="bg-[#ededed] hidden   lg:block mt-2 text-black font-normal "
-                                        placeholder='Search Products' />
-
-                                    <button className="search__button search__button--end" type="submit">
-                                        <span className="">
-                                        <IoIosSearch className='search__button-icon text-xl' />
-                                        </span>
-                                    </button>
-                                    <div className="search__box"></div>
-                                    <div className="search__decor">
-                                        <div className="search__decor-start"></div>
-                                        <div className="search__decor-end"></div>
+                                    <div className="relative">
+                                    <input type="text"  placeholder="&nbsp; &nbsp; Search Products" name='message' id='search_product'  className="input  w-full rounded-full  focus:ring-0 focus:border-0 outline-none bg-[#ededed]" />
+                                        <IoIosSearch className='search__button-icon absolute top-[25px] right-4 text-[#666666] transform -translate-y-1/2  text-xl' />
+                                     
                                     </div>
                                 </form>
                             </div>
@@ -285,13 +275,13 @@ const NavBar = () => {
                         <div className="header__indicators flex items-center justify-start">
                             <div className="pr-3 ">
                                 <a href="https://speedyrecon.com/cart" className="indicator__button">
-                                    <span className="indicator__icon">
+                                
 
-                                        <span className="indicator__counter count bg-red-400 w-2 h-2 p-0.5 mt-1 text-xs text-white" id="count" style={{fontSize:'10px'}}>
+                                        <span className="indicator__counter count bg-red-400 w-2 h-2 p-0.5 mt-1 text-xs skew-x-6 text-white" id="count" style={{fontSize:'10px'}}>
                                             0
                                         </span>
                                         <FiShoppingCart className='mb-4 h-8 w-8'/>
-                                    </span>
+                                    
                                 </a>
                             </div>
                             <div className="indicator indicator--trigger--click header-element--account">
@@ -363,12 +353,12 @@ const NavBar = () => {
         <div className="departments__arrow"></div>
         <div className="departments__body ">
             
-            <ul className="departments__list "style={{position:'absolute', zIndex:'4',backgroundColor:'white'}}>
+            <ul className="departments__list ml-10"style={{position:'absolute', zIndex:'4',backgroundColor:'white'}}>
                 <li className="departments__list-padding" role="presentation"></li>
-                <li onMouseEnter={toggleDropdownItem} className="departments__item departments__item--submenu--megamenu departments__item--has-submenu menu-title flex ">
+                <li onMouseEnter={toggleDropdownItem} className="departments__item departments__item--submenu--megamenu departments__item--has-submenu menu-title ml-24 flex ">
                 <ul className=''>
-                <li className='flex'>
-                   <a href="https://speedyrecon.com/#" className="departments__item-link flex gap-3 items-center">
+                <li className='flex justify-center'>
+                   <a href="https://speedyrecon.com/#" className="departments__item-link flex gap-3 justify-center items-center ">
                         Injector
                         <span className="departments__item-arrow"><svg width="7" height="11">
                             <path d="M0.3,10.7L0.3,10.7c0.4,0.4,0.9,0.4,1.3,0L7,5.5L1.6,0.3C1.2-0.1,0.7,0,0.3,0.3l0,0c-0.4,0.4-0.4,1,0,1.3l4,3.9l-4,3.9

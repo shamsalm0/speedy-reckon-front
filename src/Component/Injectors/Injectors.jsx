@@ -57,14 +57,14 @@ const Injectors = () => {
       <div className='flex lg:justify-between items-center mx-auto mb-8' style={{width:'1200px'}}>
   <h2 className='text-[#262626] text-2xl font-serif font-bold'>Injectors</h2>
   <div className=' mr-0'>
-          <button className='h-5 w-5 bg-[#FF7F3C] transform skewX-45  mr-1' onClick={handleForward}><MdArrowForwardIos className=''/></button>
-        <button className='h-5 w-5 bg-[#FF7F3C]' onClick={handleBackward}><MdArrowBackIos className='ml-1'/></button>
+          <button className='h-5 w-5 bg-[#FF7F3C] transform skew-x-12  mr-1' onClick={handleForward}><MdArrowForwardIos className=''/></button>
+        <button className='h-5 w-5 bg-[#FF7F3C] skew-x-12' onClick={handleBackward}><MdArrowBackIos className='ml-1'/></button>
   </div>
       </div>
-      <div className='flex justify-center gap-2 'style={{}} >
+      <div className={`flex justify-center gap-2 transition-opacity duration-500 ${isSmallScreen ? 'md:opacity-0' : 'opacity-100'}`}style={{}} >
         {injectors.map((injector, index) => (
           <div key={injector.id} className={`card  ${isSmallScreen && index !== currentPosition ? 'hidden' : ''} ${isMediumScreen && index > 2 ? 'hidden' : ''}`}>
-          <InjectorCard className='card-container' injector={injectors[(index + currentPosition) % injectors.length]} />
+          <InjectorCard className='card-container ' injector={injectors[(index + currentPosition) % injectors.length]} />
         </div>
         ))}
       </div>
