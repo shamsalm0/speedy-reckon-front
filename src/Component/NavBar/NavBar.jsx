@@ -25,11 +25,11 @@ const NavBar = () => {
     const toggleDropdownUser = () => {
         setIsUserOpen(!isUserOpen);
     }
-    const toggleDropdownCat = () =>{
+    const toggleDropdownCat = () => {
         setIsCatOpen(!isCatOpen);
     }
 
-    const toggleDropdownItem = () =>{
+    const toggleDropdownItem = () => {
         setIsItemOpen(!isItemOpen);
     }
 
@@ -44,10 +44,10 @@ const NavBar = () => {
             <div className='header-container' >
                 <section>
                     <div className=" hidden  lg:flex lg:justify-between ">
-                        <div className="hidden bg-[#f3f4f5] lg:flex lg:gap-6 lg:items-center h-9 lg:flex-shrink lg:flex-grow">
+                        <div className="hidden bg-[#f3f4f5] mx-[2px] lg:flex lg:gap-6 lg:items-center h-9 lg:flex-shrink ">
                             <div className="phone_top">
                                 <a href="tel:08000248558">
-                                    <div className='flex items-center gap-1 text-sm text-[#C94A00] font-sans' style={{ fontWeight: '700',fontFamily:'Open Sans,sans-serif'}}>
+                                    <div className='flex items-center gap-1 text-sm text-[#C94A00] font-sans' style={{ fontWeight: '700', fontFamily: 'Open Sans,sans-serif' }}>
                                         <FaPhone className='rotating-icon'></FaPhone>
                                         &nbsp;&nbsp;0800 02 48 55 8  <div className='bg-[#ddd] h-4 ml-3 ' style={{ width: '1px' }}></div>
                                     </div>
@@ -56,25 +56,25 @@ const NavBar = () => {
                             <div>
                                 <div className="phone_top">
                                     <a href="tel:07708686861">
-                                        <div className='flex items-center text-sm text-[#C94A00] font-sans' style={{ fontWeight: '700',fontFamily:'Open Sans,sans-serif' }}>
+                                        <div className='flex items-center text-sm text-[#C94A00] font-sans' style={{ fontWeight: '700', fontFamily: 'Open Sans,sans-serif' }}>
                                             <FaPhone className='rotating-icon'></FaPhone>
                                             &nbsp;&nbsp;0770 86 86 86 1 <div className='bg-[#ddd] h-4 ml-3 ' style={{ width: '1px' }}></div>
                                         </div>
                                     </a>
                                 </div>
                             </div>
-                            <div className='text-[#262626] text-sm'style={{fontFamily:'Open Sans,sans-serif'}}>
+                            <div className='text-[#262626] text-sm' style={{ fontFamily: 'Open Sans,sans-serif' }}>
                                 Mon - Thu 08:00 - 17:00, Fri 08:00 - 16:00
                             </div>
                         </div>
-                        <div className="topbar--item topbar--right bg-[#f3f4f5] flex justify-end gap-3 items-center h-9 flex-shrink flex-grow"style={{fontSize:'13.5px',fontFamily:'Open Sans,sans-serif',color:'#666666'}}>
+                        <div className="topbar--item topbar--right bg-[#f3f4f5] flex justify-end gap-3 items-center h-9 flex-shrink flex-grow" style={{ fontSize: '13.5px', fontFamily: 'Open Sans,sans-serif', color: '#666666' }}>
                             <div className="">
                                 <p><a href="/terms-and-conditions">Terms &amp; Condition</a></p>
                             </div><div className='bg-[#ddd] h-4  ' style={{ width: '1px' }}></div>
                             <div className="">
                                 <p><a href="/privacy-policy">Privacy Policy</a></p>
                             </div><div className='bg-[#ddd] h-4  ' style={{ width: '1px' }}></div>
-                            <div onMouseEnter={toggleDropdownLang} className=" relative topbar-dropdown">
+                            <div onMouseEnter={toggleDropdownLang} onMouseLeave={toggleDropdownLang} className=" relative topbar-dropdown">
                                 <div className="language list-dropdown flex items-center">
                                     <span className="current flex items-center gap-1">
                                         <img src="https://drfurithemes.com/farmart/wp-content/themes/farmart-child/images/flag-en.png" alt="English" />English
@@ -84,7 +84,7 @@ const NavBar = () => {
                                     </span>
                                     {
                                         isOpen && (
-                                            <div className='absolute mt-12 bg-gray-400'>
+                                            <div className='absolute mt-12 lg:mr-8 px-8 border shadow-lg py-1 bg-white'>
                                                 <ul className='dropdown-content'>
                                                     <li className="0"><a className='flex items-center' href="http://en"><img src="https://drfurithemes.com/farmart/wp-content/themes/farmart-child/images/flag-en.png" alt="English" />English</a></li>
                                                 </ul>
@@ -93,7 +93,7 @@ const NavBar = () => {
                                     }
                                 </div>
                             </div> <div className='bg-[#ddd] h-4  ' style={{ width: '1px' }}></div>
-                            <div onMouseEnter={toggleDropdownCur} className="widgets farmart-currency-widgets topbar-dropdown">
+                            <div onMouseEnter={toggleDropdownCur} onMouseLeave={toggleDropdownCur} className="widgets farmart-currency-widgets topbar-dropdown">
                                 <div className="farmart-currency ">
                                     <div className="dropdown flex items-center">
                                         <span className="current flex items-center">
@@ -104,7 +104,7 @@ const NavBar = () => {
                                         </span>
                                         {
                                             isCurrencyOpen && (
-                                                <div className='absolute mt-12 bg-gray-400'>
+                                                <div className='absolute mt-12   border shadow-lg  bg-white'>
                                                     <ul className=''>
                                                         <li className="active"><a href="#" className="flex items-center" data-currency="USD">€ EUR</a></li>
                                                     </ul>
@@ -119,7 +119,7 @@ const NavBar = () => {
                 </section>
                 <section>
                     <div className="top_header__row flex justify-around items-center pt-2" style={{
-                        
+
                     }}>
                         <div >
 
@@ -264,9 +264,9 @@ const NavBar = () => {
                             <div className="search">
                                 <form action="https://speedyrecon.com/get_all_products" className="search__body m-auto flex items-center" >
                                     <div className="relative">
-                                    <input type="text"  placeholder="&nbsp; &nbsp; Search Products" name='message' id='search_product'  className="input  w-full rounded-full  focus:ring-0 focus:border-0 outline-none bg-[#ededed]" />
+                                        <input type="text" placeholder="&nbsp; &nbsp; Search Products" name='message' id='search_product' className="input  w-full rounded-full  focus:ring-0 focus:border-0 outline-none bg-[#ededed]" />
                                         <IoIosSearch className='search__button-icon absolute top-[25px] right-4 text-[#666666] transform -translate-y-1/2  text-xl' />
-                                     
+
                                     </div>
                                 </form>
                             </div>
@@ -275,13 +275,13 @@ const NavBar = () => {
                         <div className="header__indicators flex items-center justify-start">
                             <div className="pr-3 ">
                                 <a href="https://speedyrecon.com/cart" className="indicator__button">
-                                
 
-                                        <span className="indicator__counter count bg-red-400 w-2 h-2 p-0.5 mt-1 text-xs skew-x-6 text-white" id="count" style={{fontSize:'10px'}}>
-                                            0
-                                        </span>
-                                        <FiShoppingCart className='mb-4 h-8 w-8'/>
-                                    
+
+                                    <span className="indicator__counter count bg-red-400 w-2 h-2 p-0.5 mt-1 text-xs skew-x-6 text-white" id="count" style={{ fontSize: '10px' }}>
+                                        0
+                                    </span>
+                                    <FiShoppingCart className='mb-4 h-8 w-8' />
+
                                 </a>
                             </div>
                             <div className="indicator indicator--trigger--click header-element--account">
@@ -292,7 +292,7 @@ const NavBar = () => {
                                 </button>
                                 {
                                     isUserOpen && (
-                                        <div className="indicator__content"style={{position:'absolute',zIndex:'1',right:'20px',top:'60px',backgroundColor:'white',width:'280px',height:'305px'}}>
+                                        <div className="indicator__content" style={{ position: 'absolute', zIndex: '1', right: '20px', top: '60px', backgroundColor: 'white', width: '280px', height: '305px' }}>
                                             <div className="account-menu">
 
 
@@ -330,307 +330,322 @@ const NavBar = () => {
                     </div>
                 </section>
                 <section>
-                    <div className="header__navbar lg:flex justify-start hidden" style={{background:"#FF7F3C", color:"#ffff", marginTop:"80px",height:"47px"}}>
+                    <div className="header__navbar lg:flex justify-start hidden" style={{ background: "#FF7F3C", color: "#ffff", marginTop: "80px", height: "47px" }}>
                         <div className="header__navbar-departments ">
                             <div className="departments ">
-                                <button onClick={toggleDropdownCat} className="departments__button flex gap-6 px-10 items-center hover:bg-black" type="button">
+                                <div className="dropdown dropdown-bottom main-menu_item ">
+                                    <div tabIndex={0} onClick={toggleDropdownCat} role="button" className="main-menu__link text-[13px]  font-bold  text-white m-1 flex gap-6 px-10 items-center hover:bg-black h-8" style={{fontFamily:'Proxima Nova', fontStyle:'none'}}>
                                     <span className="departments__button-icon ">
                                         <svg className='text-white' width="16px" height="12px" style={{color:'white'}}>
                                             <path style={{fill:'white'}} d="M0,7L0,5L16,5L16,7L0,7ZM0,0L16,0L16,2L0,2L0,0ZM12,12L0,12L0,10L12,10L12,12Z"></path>
                                         </svg>
-                                    </span>
-                                    <span className="departments__button-title menu-title text-white">Category</span>
-                                    <span className="departments__button-arrow">
-                                        <svg width="9px" height="6px">
+                                    </span> CATEGORY
+                                    <svg width="9px" height="6px">
                                             <path style={{fill:'white'}} d="M0.2,0.4c0.4-0.4,1-0.5,1.4-0.1l2.9,3l2.9-3c0.4-0.4,1.1-0.4,1.4,0.1c0.3,0.4,0.3,0.9-0.1,1.3L4.5,6L0.3,1.6C-0.1,1.3-0.1,0.7,0.2,0.4z"></path>
                                         </svg>
-                                    </span>
-                                </button>
-{
-    isCatOpen &&(
-        
-        <div className="departments__menu">
-        <div className="departments__arrow"></div>
-        <div className="departments__body ">
-            
-            <ul className="departments__list ml-10"style={{position:'absolute', zIndex:'4',backgroundColor:'white'}}>
-                <li className="departments__list-padding" role="presentation"></li>
-                <li onMouseEnter={toggleDropdownItem} className="departments__item departments__item--submenu--megamenu departments__item--has-submenu menu-title ml-24 flex ">
-                <ul className=''>
-                <li className='flex justify-center'>
-                   <a href="https://speedyrecon.com/#" className="departments__item-link flex gap-3 justify-center items-center ">
-                        Injector
-                        <span className="departments__item-arrow"><svg width="7" height="11">
-                            <path d="M0.3,10.7L0.3,10.7c0.4,0.4,0.9,0.4,1.3,0L7,5.5L1.6,0.3C1.2-0.1,0.7,0,0.3,0.3l0,0c-0.4,0.4-0.4,1,0,1.3l4,3.9l-4,3.9
+                                    </div>
+                                   {
+                                    isCatOpen && (
+                                        
+                                        <ul onMouseEnter={toggleDropdownItem} onMouseLeave={toggleDropdownItem} className='ml-8'>
+                                       
+                                     <div className='text-black'>
+                                     <ul tabIndex={0} className="dropdown-content z-[4] menu p-2 text-[13px] font-medium shadow bg-base-100 rounded-box w-52 flex justify-between border-r-2">
+                                     <li>    <a href="https://speedyrecon.com/#" className="departments__item-link  ">
+                                                                    <div className='flex justify-between gap-8 items-center w-40'>
+                                                                        <div>
+                                                                            <p>INJECTOR</p>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span className="departments__item-arrow"><svg width="7" height="11">
+                                                                                <path d="M0.3,10.7L0.3,10.7c0.4,0.4,0.9,0.4,1.3,0L7,5.5L1.6,0.3C1.2-0.1,0.7,0,0.3,0.3l0,0c-0.4,0.4-0.4,1,0,1.3l4,3.9l-4,3.9
                     C-0.1,9.8-0.1,10.4,0.3,10.7z"></path>
-                        </svg>
-                        </span>
-                    </a>
-                   </li>
-                    <li className="departments__item departments__item--submenu--megamenu departments__item--has-submenu menu-title " style={{padding:'0px'}}>
-                    <a href="https://speedyrecon.com/#" className="departments__item-link flex gap-3 items-center">
-                        Fuel Pump
-                        <span className="departments__item-arrow"><svg width="7" height="11">
-                            <path d="M0.3,10.7L0.3,10.7c0.4,0.4,0.9,0.4,1.3,0L7,5.5L1.6,0.3C1.2-0.1,0.7,0,0.3,0.3l0,0c-0.4,0.4-0.4,1,0,1.3l4,3.9l-4,3.9
+                                                                            </svg>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a></li>
+                                        <li>   <a href="https://speedyrecon.com/#" className="departments__item-link  ">
+                                                                    <div className='flex justify-between items-center w-40'>
+                                                                        <div>
+                                                                            <p>FUEL PUMP</p>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span className="departments__item-arrow"><svg width="7" height="11">
+                                                                                <path d="M0.3,10.7L0.3,10.7c0.4,0.4,0.9,0.4,1.3,0L7,5.5L1.6,0.3C1.2-0.1,0.7,0,0.3,0.3l0,0c-0.4,0.4-0.4,1,0,1.3l4,3.9l-4,3.9
                     C-0.1,9.8-0.1,10.4,0.3,10.7z"></path>
-                        </svg>
-                        </span>
-                    </a>
-                   
-                    
-                </li>
-                </ul>
-                
-                    {
-                        isItemOpen && (
-                            <div className="departments__item-menu">
-                        <div className="megamenu departments__megamenu departments__megamenu--size--xl">
-                            <div className="megamenu__image">
+                                                                            </svg>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a></li>
+                                     </ul>
+                                     </div>
+                                                                
+                                                                
+
+                                                <ul className="departments__list ml-36" style={{ position: 'absolute', zIndex: '4', backgroundColor: 'white',left:'95px' }}>
+                                                
+                                                    <li  className="  text-black  flex ">
+                                                       
+
+                                                        {
+                                                            isItemOpen && (
+                                                                <div className=" shadow-md">
+                                                                    <div className="">
+                                                                        <div className="">
+
+                                                                        </div>
+                                                                        <div className="row grid grid-cols-5 font-[500] mt-5 s" style={{ gap: "12px 0", marginLeft: '20px', width: '1000px', }}>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/MERCEDES">MERCEDES</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/BMW">BMW</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/AUDI">AUDI</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/PEUGEOT">PEUGEOT</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/FORD">FORD</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/FIAT">FIAT</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/MAZDA">MAZDA</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/RENAULT">RENAULT</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/JEEP">JEEP</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/LAND%20ROVER">LAND ROVER</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/NISSAN">NISSAN</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/VOLKSWAGEN">VOLKSWAGEN</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/VAUXHALL">VAUXHALL</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/JAGUAR">JAGUAR</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/DACIA">DACIA</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/KIA">KIA</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/HYUNDAI">HYUNDAI</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/MITSUBISHI">MITSUBISHI</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/IVECO">IVECO</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/HONDA">HONDA</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/VOLVO">VOLVO</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/SUBARU">SUBARU</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div className="col-1of5">
+                                                                                <ul className="">
+
+                                                                                    <li className="">
+                                                                                        <a className="" href="https://speedyrecon.com/model_list/by_brand/3/TOYOTA">TOYOTA</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            )
+                                                        }
+                                                    </li>
+
+                                                    <li className="departments__list-padding" role="presentation"></li>
+                                                </ul>
+                                                
+                                           
+                                    </ul>
+                                    
+                                    )
+                                   }
+                                </div>
                                 
-                            </div>
-                            <div className="row grid grid-cols-5" style={{gap: "12px 0",marginLeft:'10px',width:'1200px'}}>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
 
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/MERCEDES">MERCEDES</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/BMW">BMW</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/AUDI">AUDI</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/PEUGEOT">PEUGEOT</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/FORD">FORD</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/FIAT">FIAT</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/MAZDA">MAZDA</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/RENAULT">RENAULT</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/JEEP">JEEP</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/LAND%20ROVER">LAND ROVER</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/NISSAN">NISSAN</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/VOLKSWAGEN">VOLKSWAGEN</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/VAUXHALL">VAUXHALL</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/JAGUAR">JAGUAR</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/DACIA">DACIA</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/KIA">KIA</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/HYUNDAI">HYUNDAI</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/MITSUBISHI">MITSUBISHI</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/IVECO">IVECO</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/HONDA">HONDA</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/VOLVO">VOLVO</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/SUBARU">SUBARU</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1of5">
-                                    <ul className="megamenu__links megamenu-links megamenu-links--root">
-
-                                        <li className="megamenu-links__item megamenu-links__item--has-submenu">
-                                            <a className="megamenu-links__item-link" href="https://speedyrecon.com/model_list/by_brand/3/TOYOTA">TOYOTA</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                        
+                                    
                             </div>
                         </div>
-                    </div>
-                        )
-                    }
-                </li>
-              
-                <li className="departments__list-padding" role="presentation"></li>
-            </ul>
-            <div className="departments__menu-container"></div>
-        </div>
-    </div>
-    )
-}
-                            </div>
-                        </div>
+
                         
-                        <span className="menu-border-right " style={{width:'1px',height:'22px',backgroundColor:'#FFAD82',marginTop:'8px'}}></span>
                         <div className="header__navbar-menu ">
                             <div className="main-menu">
-                                <ul className="main-menu__list gap-5 mr-80 menu-title">
-                                    <li className="main-menu_item">
-                                        <a href="https://speedyrecon.com/" className="main-menu__link  mx-5 hover:bg-black text-white">
+                                <ul className="main-menu__list gap-0 mr-80 menu-title">
+                                <span className="menu-border-right " style={{ width: '1px', height: '22px', backgroundColor: '#FFAD82', marginTop: '1px' }}></span>
+                                    <li className="px-6 hover:bg-black">
+                                        <a href="https://speedyrecon.com/" className="main-menu__link     text-white">
                                             Home
 
                                         </a>
-                                        
-                                    </li>
-                                    
-                                    <span className="menu-border-right " style={{width:'1px',height:'22px',backgroundColor:'#FFAD82',marginBottom:'4px'}}></span>
-                                    <li className="main-menu_item main-menuitem--submenu--menu main-menu_item--has-submenu  ">
 
-                                        <a href="https://speedyrecon.com/brand_list/3" className="main-menu__link hover:bg-black text-white">
+                                    </li>
+
+                                    <span className="menu-border-right " style={{ width: '1px', height: '22px', backgroundColor: '#FFAD82', marginBottom: '4px' }}></span>
+                                    <li className=" hover:bg-black px-6">
+
+                                        <a href="https://speedyrecon.com/brand_list/3" className="main-menu__link  text-white">
                                             Injector
 
                                         </a>
                                     </li>
-                                    
-                                    <span className="menu-border-right " style={{width:'1px',height:'22px',backgroundColor:'#FFAD82',marginBottom:'4px'}}></span>
-                                    <li className="main-menu_item main-menuitem--submenu--menu main-menu_item--has-submenu  ">
 
-                                        <a href="https://speedyrecon.com/brand_list/4" className="main-menu__link hover:bg-black">
+                                    <span className="menu-border-right " style={{ width: '1px', height: '22px', backgroundColor: '#FFAD82', marginBottom: '4px' }}></span>
+                                    <li className="px-6  hover:bg-black">
+
+                                        <a href="https://speedyrecon.com/brand_list/4" className="main-menu__link ">
                                             <p className='w-24 text-white'>Fuel Pump</p>
 
                                         </a>
                                     </li>
-                                    
-                                    <span className="menu-border-right " style={{width:'1px',height:'22px',backgroundColor:'#FFAD82',marginBottom:'4px'}}></span>
+
+                                    <span className="menu-border-right " style={{ width: '1px', height: '22px', backgroundColor: '#FFAD82', marginBottom: '4px' }}></span>
 
 
-                                    <li className="main-menu_item">
+                                    <li className="px-6  hover:bg-black">
                                         <a href="https://speedyrecon.com/about-us" className="main-menu__link text-white hover:bg-black">
                                             <p className='w-24'>About Us</p>
 
                                         </a>
                                     </li>
-                                    <span className="menu-border-right " style={{width:'1px',height:'22px',backgroundColor:'#FFAD82',marginBottom:'4px'}}></span>
-                                    <li className="main-menu_item">
+                                    <span className="menu-border-right " style={{ width: '1px', height: '22px', backgroundColor: '#FFAD82', marginBottom: '4px' }}></span>
+                                    <li className="px-6  hover:bg-black">
                                         <a href="https://speedyrecon.com/contact-us" className="main-menu__link text-white hover:bg-black">
                                             <p className='w-24'>Contact Us</p>
 
@@ -645,8 +660,8 @@ const NavBar = () => {
                     </div>
                 </section>
             </div>
-          <div className='lg:h-8'></div>
-            
+            <div className='lg:h-8'></div>
+
         </div>
     );
 };
