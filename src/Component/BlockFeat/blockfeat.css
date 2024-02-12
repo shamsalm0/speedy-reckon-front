@@ -37,23 +37,45 @@ div{
 
 @media screen and (max-width:430px){
     .block-features__list{
-        display: block;
+        display: grid;
+        grid-template-columns: auto auto;
         width: 100%;
     }
     .block-features__item{
-        width: 100%;
+        width: 191px;
+        height: 204.6px;
+        display: block;
+        
         
     }
     .block-features__item-title{
-        font-size: 15px;
+        font-size: 16px;
+        display: inline;
+        text-align: center;
+        font-family: 'proxima_nova_altbold';
+        width: 151px;
+        height: 48px;
     }
+    .block-features__item-title br{
+        display: none;
+    }
+    .block-features__item-icon{
+        display: flex;
+        justify-content: center;
+    }
+  
 }
 @media screen and (min-width:700px) and (max-width:1030px) {
     .block-features__item{
         display: block;
-        
+        width: 161.75px;
+        height: 272.6px;
     }
     .block-features__item_title{
-        display: flex;
+        display: inline;
+        text-align: center;
+        font-family: 'proxima_nova_altbold';
+        width: 137px;
+        height: 48px;
     }
 }

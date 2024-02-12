@@ -7,6 +7,7 @@ const BlockFeat = () => {
     <div className="container">
         <ul className="block-features__list">
             <li className="block-features__item ">
+                
                 <div className="block-features__item-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62" fill="none" style={{width:"66.61px", height: "66.61px"}}>
                         <circle cx="31" cy="31" r="31" fill="#FF7F3C" fillOpacity="0.1"></circle>
@@ -20,10 +21,11 @@ const BlockFeat = () => {
                         <path d="M21.2979 29.7744H20.1499V25.4597H22.6998V26.3952H21.2979V27.2186H22.5906V28.1542H21.2979V29.7744ZM24.5738 28.2044V29.7744H23.4081V25.4597H24.8217C25.9943 25.4597 26.5807 25.8847 26.5807 26.7346C26.5807 27.2344 26.3367 27.621 25.8487 27.8945L27.106 29.7744H25.7838L24.8689 28.2044H24.5738ZM24.5738 27.3278H24.7922C25.1995 27.3278 25.4031 27.1478 25.4031 26.7878C25.4031 26.4907 25.2034 26.3421 24.804 26.3421H24.5738V27.3278ZM30.0602 29.7744H27.4985V25.4597H30.0602V26.3952H28.6642V27.074H29.9569V28.0096H28.6642V28.8241H30.0602V29.7744ZM33.3774 29.7744H30.8157V25.4597H33.3774V26.3952H31.9814V27.074H33.2741V28.0096H31.9814V28.8241H33.3774V29.7744Z" fill="#FF7F3C"></path>
                     </svg>
                 </div>
-                <div className="block-features__item-info ml-5">
+                <div className="block-features__item-info lg:ml-5">
                     <div className="block-features__item-title">Free Shipping to UK <br />Mainland</div>
                     <div className="block-features__item-subtitle">International shipping at cost (Price variable according
                         to destination)</div>
+                
                 </div>
             </li>
             <li className="block-features__item">
@@ -41,7 +43,7 @@ const BlockFeat = () => {
                         <path d="M45.1545 34.9448C45.0794 34.932 45.0026 34.9341 44.9283 34.951C44.8541 34.968 44.7839 34.9994 44.7218 35.0434C44.6597 35.0875 44.6069 35.1434 44.5664 35.2079C44.5259 35.2723 44.4985 35.3442 44.4857 35.4193L42.9182 44.6349C42.8927 44.7864 42.9284 44.9418 43.0174 45.0671C43.1064 45.1923 43.2414 45.2771 43.3929 45.3028C43.5444 45.3286 43.6999 45.2931 43.8252 45.2043C43.9506 45.1155 44.0356 44.9805 44.0616 44.8291L45.6291 35.6135C45.6418 35.5384 45.6397 35.4616 45.6227 35.3873C45.6058 35.3131 45.5744 35.2429 45.5303 35.1808C45.4862 35.1187 45.4304 35.0659 45.3659 35.0254C45.3014 34.9849 45.2296 34.9575 45.1545 34.9448V34.9448Z" fill="#FF7F3C"></path>
                     </svg>
                 </div>
-                <div className="block-features__item-info ml-5">
+                <div className="block-features__item-info lg:ml-5">
                     <div className="block-features__item-title">Support 24/7 Make Free Call</div>
                     <div className="block-features__item-subtitle">If you have any issues with our products please contact
                         us so we can fix it</div>
@@ -55,7 +57,7 @@ const BlockFeat = () => {
                         <path d="M26.2461 29.7718L28.9932 32.8586L36.5222 26.6357" stroke="#FF7F3C" strokeWidth="1.88571" strokeLinecap="round" strokeLinejoin="round"></path>
                     </svg>
                 </div>
-                <div className="block-features__item-info ml-5">
+                <div className="block-features__item-info lg:ml-5">
                     <div className="block-features__item-title">100% Safety and Secure Payment</div>
                     <div className="block-features__item-subtitle">
                         We heavily provide 100 % safety and secure transaction for you
@@ -73,7 +75,7 @@ const BlockFeat = () => {
                         <circle cx="24.2165" cy="26.7965" r="2.16525" transform="rotate(0.400055 24.2165 26.7965)" stroke="#FF7F3C" strokeWidth="1.81917"></circle>
                     </svg>
                 </div>
-                <div className="block-features__item-info ml-5">
+                <div className="block-features__item-info lg:ml-5">
                     <div className="block-features__item-title">Search Car Injector By Registration Number</div>
                     <div className="block-features__item-subtitle">We provide your car information by car registration
                         number

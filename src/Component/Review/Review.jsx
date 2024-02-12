@@ -11,7 +11,15 @@ const Review = () => {
         { backgroundColor: '#E0540B', height: '20px', width: '20px', border: '1px solid gray', borderRadius: '50%' },
         { backgroundColor: '#000000', height: '20px', width: '20px', border: '1px solid gray', borderRadius: '50%' },
         { backgroundColor: '#000000', height: '20px', width: '20px', border: '1px solid gray', borderRadius: '50%' },
+        { backgroundColor: '#000000', height: '20px', width: '20px', border: '1px solid gray', borderRadius: '50%' },
+        { backgroundColor: '#000000', height: '20px', width: '20px', border: '1px solid gray', borderRadius: '50%' },
+        { backgroundColor: '#000000', height: '20px', width: '20px', border: '1px solid gray', borderRadius: '50%' },
+        { backgroundColor: '#000000', height: '20px', width: '20px', border: '1px solid gray', borderRadius: '50%' },
+        { backgroundColor: '#000000', height: '20px', width: '20px', border: '1px solid gray', borderRadius: '50%' },
+        { backgroundColor: '#000000', height: '20px', width: '20px', border: '1px solid gray', borderRadius: '50%' },
+        { backgroundColor: '#000000', height: '20px', width: '20px', border: '1px solid gray', borderRadius: '50%' },
     ]);
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
 
     const showSet = (index) => {
         setSetIndex(index);
@@ -38,21 +46,36 @@ const Review = () => {
         }
 
         fetchdata();
+        const handleResize = () => {
+            const screenWidth = window.innerWidth;
+            setIsSmallScreen(screenWidth <= 600);
+            
+          };
+      
+          handleResize();
+      
+          window.addEventListener('resize', handleResize);
+      
+          return () => {
+            window.removeEventListener('resize', handleResize);
+          };
     }, [])
     return (
         <div>
-            <div className='w-full max-h-full bg-[#FAFAFA] pt-16 pb-20'>
+            <div className='w-full max-h-full bg-[#FAFAFA] pt-16 pb-5'>
                 <div className='text-center  pb-10'>
                     <h2 className='font-sans font-bold text-3xl'>Here what Our Customer Have to Say</h2>
                     <p className='font-sans text-base font-normal text-[#5E5E5E] leading-7'>During Our Work We Have Accumulated <br /> Hundreds of Positive Reviews</p>
                 </div>
-                <div className='lg:flex lg:justify-center sm:ml-48 gap-2 mb-5'>
+                <div className='lg:flex lg:justify-center sm:ml-48  gap-20 mb-5 mx-5'>
                     {
-                        clients.slice(setIndex * 3, setIndex * 3 + 3).map(client => <ReviewCard key={client.id} client={client}></ReviewCard>)
+                        !isSmallScreen ? <> {clients.slice(setIndex * 3, setIndex * 3+3).map(client => <ReviewCard key={client.id} client={client}></ReviewCard>)}</>:<>{clients.slice(setIndex * 1,setIndex * 1 + 1).map(client =><ReviewCard key={client.id} client={client}></ReviewCard>)}</>
                     }
+                   
                 </div>
                 <div className='flex justify-center gap-1'>
-                    {buttonStyles.map((style, index) => (
+                  {
+                    !isSmallScreen ? <>  {buttonStyles.slice(0,3).map((style, index) => (
                         <button
                             key={index}
                             style={{
@@ -64,12 +87,26 @@ const Review = () => {
                             }}
                             onClick={() => showSet(index)}
                         ></button>
-                    ))}
+                    ))}</> :
+                    <>  {buttonStyles.map((style, index) => (
+                        <button
+                            key={index}
+                            style={{
+                                backgroundColor: style.backgroundColor,
+                                height: style.height,
+                                width: style.width,
+                                border: style.border,
+                                borderRadius: style.borderRadius,
+                            }}
+                            onClick={() => showSet(index)}
+                        ></button>
+                    ))}</>
+                  }
                 </div>
             </div>
             <div style={{ height: '100px' }}></div>
             <section>
-                <div className='lg:grid grid-cols-2 lg:grid-cols-4 flex flex-wrap gap-1 social-container sm:ml-20' >
+                <div className='lg:grid  grid-cols-2 lg:grid-cols-4  w-full flex justify-center  flex-wrap gap-0 social-container sm:ml-20 ' >
                     <div className='w-40 h-24 '>
                         <p className='text-semibold text-[#ffc711]  text-xl flex justify-center mb-4 ml-1'><FaStar className='w-3 h-3' /><FaStar className='w-3 h-3' /><FaStar className='w-3 h-3' /><FaStar className='w-3 h-3' /><FaStar className='w-3 h-3' /></p>
                         <div className='flex justify-center'>

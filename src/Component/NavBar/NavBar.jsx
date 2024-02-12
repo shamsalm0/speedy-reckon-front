@@ -12,6 +12,7 @@ const NavBar = () => {
     const [isUserOpen, setIsUserOpen] = useState(false);
     const [isCatOpen, setIsCatOpen] = useState(false);
     const [isItemOpen, setIsItemOpen] = useState(false);
+    const [searchOpen, setSearchOpen] = useState(false);
     const toggleDropdownLang = () => {
         setIsOpen(!isOpen);
         setIsCurrencyOpen(false)
@@ -39,8 +40,13 @@ const NavBar = () => {
         setToggled(!isToggled);
     };
 
+    const handleSearch = () =>{
+        setSearchOpen(!searchOpen)
+    }
+
     return (
         <div >
+            
             <div className='header-container' >
                 <section>
                     <div className=" hidden  lg:flex lg:justify-between ">
@@ -247,9 +253,18 @@ const NavBar = () => {
                                     </a>
                                 </div> : ''}
                             </div>
-                        </div>
+                        </div>  
 
                         <div className="top_header__logo">
+                        {
+                                            searchOpen && (
+                                                <div>
+                                                    <input type="search" className="p-2 absolute z-10 top-0 left-0  w-full  h-20 text-black " id="mobile_search_product" name="search"  placeholder="  Enter keyword or part number"></input>
+                                                    <IoIosSearch className='block absolute z-10 right-20 top-8 lg:hidden md:hidden  sm:hidden text-2xl ml-20'/>
+                                                    <p onClick={handleSearch} className='absolute z-10 right-8 top-8'>X</p>
+                                                     </div>
+                                            )
+                                         }
                             <a href="https://speedyrecon.com" className="logo">
 
                                 <div className="logo__image">
@@ -264,9 +279,10 @@ const NavBar = () => {
                             <div className="search">
                                 <form action="https://speedyrecon.com/get_all_products" className="search__body m-auto flex items-center" >
                                     <div className="relative">
-                                        <input type="text" placeholder="&nbsp; &nbsp; Search Products" name='message' id='search_product' className="input  w-full rounded-full  focus:ring-0 focus:border-0 outline-none bg-[#ededed]" />
-                                        <IoIosSearch className='search__button-icon absolute top-[25px] right-4 text-[#666666] transform -translate-y-1/2  text-xl' />
-
+                                        <input type="text" placeholder="&nbsp; &nbsp; Search Products" name='message' id='search_product' className="input  w-full rounded-full hidden lg:block focus:ring-0 focus:border-0 outline-none bg-[#ededed]" />
+                                        <IoIosSearch className='search__button-icon hidden md:block sm:block lg:block absolute top-[25px] right-4 text-[#666666] transform -translate-y-1/2  text-xl' />
+                                         <IoIosSearch onClick={handleSearch} className='block lg:hidden md:hidden sm:hidden text-2xl ml-20'/>
+                                       
                                     </div>
                                 </form>
                             </div>
@@ -274,9 +290,10 @@ const NavBar = () => {
 
                         <div className="header__indicators flex items-center justify-start">
                             <div className="pr-3 ">
+                                
                                 <a href="https://speedyrecon.com/cart" className="indicator__button">
 
-
+                                  
                                     <span className="indicator__counter count bg-red-400 w-2 h-2 p-0.5 mt-1 text-xs skew-x-6 text-white" id="count" style={{ fontSize: '10px' }}>
                                         0
                                     </span>
@@ -287,7 +304,7 @@ const NavBar = () => {
                             <div className="indicator indicator--trigger--click header-element--account">
                                 <button onClick={toggleDropdownUser} className="indicator__button" >
                                     <span className="indicator__icon">
-                                        <FaRegUser className='w-8 h-8'></FaRegUser>
+                                        <FaRegUser className='w-8 h-8 hidden lg:block'></FaRegUser>
                                     </span>
                                 </button>
                                 {

@@ -4,8 +4,8 @@ const ReviewCard = ({client}) => {
     const {name,id,imageUrl,comments} = client;
     return (
         <div>
-            <div className="card w-96 lg:w-92 lg:h-92 lg:py-5  bg-base-100 shadow-2xl">
-  <figure className="px-10 pt-10">
+            <div className="card w-96 lg:w-[366px] lg:h-[368px] lg:py-5  bg-base-100 shadow-2xl">
+  <figure className="px-5 pt-10">
     <img src={imageUrl} alt="Shoes" className="rounded-full" />
   </figure>
   <div className=" card-body  items-center text-center">
