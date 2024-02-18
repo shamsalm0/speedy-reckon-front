@@ -135,10 +135,10 @@ const NavBar = () => {
                             </label>
                             <div className={`toggle-content ${isToggled ? 'active' : ''}`}>
                                 {/* Content to show/hide based on toggle state */}
-                                {isToggled ? <div className="mobile-menu-body">
-                                    <div className='flex justify-end mb-3'><button className='text-3xl' onClick={handleToggle}>X</button></div>
+                                {isToggled ? <div className="mobile-menu-body h-[100vh]">
+                                    <div className='flex justify-between mt-3'> <div></div><div className='text-center flex justify-center'><h2>Menu</h2></div><button className='text-base mr-2' onClick={handleToggle}>X</button></div>
                                     <div className="mobile-menu__divider"></div>
-                                    <div className="mobile-menu__indicators flex mx-auto ">
+                                    <div className="mobile-menu__indicators flex justify-center items-center mt-8 ">
                                         <a className="mobile-menu__indicator mx-3" href="https://speedyrecon.com/customer/profile/dashboard">
                                             <span className="mobile-menu__indicator-icon mt-2">
 
@@ -164,7 +164,7 @@ const NavBar = () => {
                                         </a>
                                     </div>
                                     <div className="mobile-menu__divider"></div>
-                                    <ul className="mobile-menu__links mb-20">
+                                    <ul className="mobile-menu__links mt-8 ml-4 text-black"style={{fontFamily:"'Open Sans', sans-serif"}}>
                                         <li data-mobile-menu-item="">
                                             <a href="https://speedyrecon.com" className="">
                                                 Home
@@ -234,7 +234,7 @@ const NavBar = () => {
                                     </ul>
                                     <div className="mobile-menu__spring"></div>
                                     <div className="mobile-menu__divider"></div>
-                                    <a className="mobile-menu__contacts text-center" href="">
+                                    <a className="mobile-menu__contacts text-center flex items-end justify-center h-[70vh] " href="">
                                         <span className="">
                                             <span style={{ display: "block", fontWeight: "700", fontSize: "15.4885px", lineHeight: "20px", letterSpacing: "0.430236px" }}>
                                                 0800 02 48 55 8
