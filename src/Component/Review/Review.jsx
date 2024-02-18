@@ -144,7 +144,7 @@ const Review = () => {
                         <img className='rounded-lg th-image1' src="https://speedyrecon.com/customer_frontend/images/review11_1.WebP" style={{height:'438px', width:'638px'}}  alt="" />
                     </div>
                     <div className='col-span-6'>
-          <div className='flex lg:justify-between lg:gap-6 '>
+          <div className='flex lg:justify-between lg:gap-6 ml-10'>
           <img className='rounded-lg th-image2' src="https://speedyrecon.com/customer_frontend/images/review22_1.WebP" height='500px' width='300px' alt="" />
                         <img className='rounded-lg th-image2' src="https://speedyrecon.com/customer_frontend/images/review33_1.WebP" height='500px' width='300px' alt="" />
           </div>

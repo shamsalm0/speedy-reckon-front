@@ -234,7 +234,7 @@ const NavBar = () => {
                                     </ul>
                                     <div className="mobile-menu__spring"></div>
                                     <div className="mobile-menu__divider"></div>
-                                    <a className="mobile-menu__contacts text-center flex items-end justify-center h-[70vh] " href="">
+                                    <a className="mobile-menu__contacts text-center flex items-end justify-center h-[60vh] " href="">
                                         <span className="">
                                             <span style={{ display: "block", fontWeight: "700", fontSize: "15.4885px", lineHeight: "20px", letterSpacing: "0.430236px" }}>
                                                 0800 02 48 55 8
